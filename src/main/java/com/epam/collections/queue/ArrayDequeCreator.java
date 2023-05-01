@@ -13,13 +13,13 @@ public class ArrayDequeCreator extends PriorityQueue<String> {
 
         while (firstQueue.size() > 0 || secondQueue.size() > 0) {
             if (!firstQueue.isEmpty()) {
-                firstQueue.add(combination.poll());
+                firstQueue.add(combination.removeLast());
                 combination.addLast(firstQueue.poll());
                 combination.addLast(firstQueue.poll());
             }
 
             if (!secondQueue.isEmpty()) {
-                secondQueue.add(combination.poll());
+                secondQueue.add(combination.removeLast());
                 combination.addLast(secondQueue.poll());
                 combination.addLast(secondQueue.poll());
             }
